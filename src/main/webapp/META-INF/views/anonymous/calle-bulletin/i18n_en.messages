@@ -1,0 +1,23 @@
+# i18n_en.messages
+#
+# Copyright (c) 2019 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+anonymous.calle-bulletin.list.label.title = Title
+anonymous.calle-bulletin.list.label.artist = Artist
+anonymous.calle-bulletin.list.label.album = Album
+anonymous.calle-bulletin.list.label.moment = Moment
+
+anonymous.calle-bulletin.form.label.title = Title
+anonymous.calle-bulletin.form.label.artist = Artist
+anonymous.calle-bulletin.form.label.album = Album
+
+
+anonymous.calle-bulletin.form.button.create = Create CalleBulletin
+anonymous.calle-bulletin.form.button.return = Return
+

@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+- sample-data.xml
+-
+- Copyright (c) 2019 Rafael Corchuelo.
+-
+- In keeping with the traditional purpose of furthering education and research, it is
+- the policy of the copyright owner to permit non-commercial use and redistribution of
+- this software. It has been tested carefully, but it is not guaranteed for any particular
+- purposes.  The copyright owner does not offer any warranties or representations, nor do
+- they accept any liabilities with respect to them.
+-->
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<import resource="conversion-service.xml" />
+	
+	
+	<!-- Shout -->
+	
+	<bean id="shout01" class="acme.entities.shout.Shout">
+	
+	<property name="author" value="John Doe"/>
+	<property name="text" value="I´m happy"/>
+	<property name="moment" value="2019/09/09 10:00"/>
+	
+	</bean>
+	
+	<bean id="shout02" class="acme.entities.shout.Shout">
+	
+	<property name="author" value="Jane Doe"/>
+	<property name="text" value="I´m the master of my room!"/>
+	<property name="moment" value="2019/08/09 15:55"/>
+	
+	</bean>
+	
+	<bean id="shout03" class="acme.entities.shout.Shout">
+	
+	<property name="author" value="Foo Bar"/>
+	<property name="text" value="Just turning 20!"/>
+	<property name="moment" value="2019/09/07 00:00"/>
+	
+	</bean>
+	
+	<!-- DoradoBulletin -->
+	
+	<bean id="doradoBulletin1" class="acme.entities.doradoBulletin.DoradoBulletin">
+	
+	<property name="sender" value="Oscar"/>
+	<property name="receiver" value="Pablo"/>
+	<property name="web" value="https://www.gmail.com"/>
+	
+	</bean>
+	
+	<!-- CalleBulletin -->
+	
+	<bean id="calleBulletin01" class="acme.entities.calleBulletin.CalleBulletin">
+	
+	<property name="title" value="Uno contra 20 Mc´s"/>
+	<property name="artist" value="Toteking"/>
+	<property name="album" value="Música para Enfermos"/>
+	<property name="moment" value="2004/07/24 17:43"/>
+	
+	</bean>
+	
+	<bean id="calleBulletin02" class="acme.entities.calleBulletin.CalleBulletin">
+	
+	<property name="title" value="1000 guerras"/>
+	<property name="artist" value="Ayax y Prok"/>
+	<property name="album" value="Single"/>
+	<property name="moment" value="2020/07/16 15:00"/>
+	
+	</bean>
+	
+	<bean id="calleBulletin03" class="acme.entities.calleBulletin.CalleBulletin">
+	
+	<property name="title" value="Y la felicidad qué"/>
+	<property name="artist" value="Canserbero"/>
+	<property name="album" value="Vida"/>
+	<property name="moment" value="2010/07/08 12:34"/>
+	
+	</bean>
+	
+	<bean id="calleBulletin04" class="acme.entities.calleBulletin.CalleBulletin">
+	
+	<property name="title" value="Anochece/Manifiesto"/>
+	<property name="artist" value="Nach"/>
+	<property name="album" value="Un día en suburbia"/>
+	<property name="moment" value="2008/02/13 03:34"/>
+	
+	</bean>
+	
+	<!-- Inquiries -->
+	
+	<bean id="inquiries01" class="acme.entities.inquiries.Inquiries">
+	
+	<property name="title" value="¿La sangre manda en castellano?"/>
+	<property name="dateOfCreation" value="2020/05/01 11:32"/>
+	<property name="deadline" value="2022/04/07 12:34"/>
+	<property name="description" value="Hola, quería saber si ya se encuentra la versión traducida del nuevo libro de Stephen
+	King titulado If It Bleeds en su idioma original
+	
+	Atentamente, un usuario inquieto"/>
+	<property name="minMoney" value="€ 21.70"/>
+	<property name="maxMoney" value="€ 22.70"/>
+	<property name="email" value="impaciente@gmail.com"/>
+	</bean>
+	
+	<bean id="inquiries02" class="acme.entities.inquiries.Inquiries">
+	
+	<property name="title" value="¿Cuándo empieza la FMS España?"/>
+	<property name="dateOfCreation" value="2020/05/13 13:45"/>
+	<property name="deadline" value="2020/11/05 11:36"/>
+	<property name="description" value="Tengo muchas ganas de volver a disfrutar de las batallas después de tanto tiempo."/>
+	<property name="minMoney" value="€ 2.00"/>
+	<property name="maxMoney" value="€ 5.00"/>
+	<property name="email" value="rapero013@gmail.com"/>
+	</bean>
+	<!-- Technology Records -->
+	
+	<bean id="technologyRecords01" class="acme.entities.technologyRecords.TechnologyRecords">
+	
+	<property name="title" value="Corriente alterna"/>
+	<property name="activitySector" value="Electricidad"/>
+	<property name="inventor" value="Nikola Tesla"/>
+	<property name="description" value="Combatió a la corriente continua de Thomas Alva Edison con éxito, funcionando en la actualidad."/>
+	<property name="website" value="https://solar-energia.net/electricidad/corriente-electrica/corriente-alterna"/>
+	<property name="email" value="ntvstae@gmail.com"/>
+	<property name="indication" value="OPEN_SOURCE"/>
+	<property name="stars" value="10"/>
+	</bean>
+	
+	<!-- Challenges -->
+	
+	<bean id="challenges01" class="acme.entities.challenges.Challenges">
+	
+	<property name="title" value="NBA"/>
+	<property name="deadline" value="2024/05/03 12:37"/>
+	<property name="description" value="La mayor liga de baloncesto del mundo, donde se encuentran los equipos más prestigiosos del mundo"/>
+	<property name="goal1" value="Campeón de liga"/>
+	<property name="reward1" value="Trofeo NBA"/>
+	<property name="goal2" value="Subcampeón"/>
+	<property name="reward2" value="Medalla de oro"/>
+	<property name="goal3" value="Tercer puesto"/>
+	<property name="reward3" value="Medalla de plata"/>
+	</bean>
+	
+	<bean id="challenges02" class="acme.entities.challenges.Challenges">
+	
+	<property name="title" value="Liga Santander"/>
+	<property name="deadline" value="2020/11/05 13:58"/>
+	<property name="description" value="La liga de primera división en españa."/>
+	<property name="goal1" value="Campeón de liga"/>
+	<property name="reward1" value="Trofeo de Liga"/>
+	<property name="goal2" value="Subcampeón"/>
+	<property name="reward2" value="Clasificación directa en la Champions"/>
+	<property name="goal3" value="Tercer puesto"/>
+	<property name="reward3" value="Clasificación directa en la Champions"/>
+	</bean>
+	
+	
+
+	<!-- Notice -->
+	
+	<bean id="notice01" class="acme.entities.notice.Notice">
+	
+	<property name="picture" value="https://www.fotoAviso1.com"/>
+	<property name="creation" value="2020/06/06 10:00"/>
+	<property name="deadline" value="2021/10/10 12:00"/>
+	<property name="body" value="Aviso sobre reformas laborales"/>
+	<property name="optional1" value="https://www.fotoInformativaOpcional1.com"/>
+	<property name="optional2" value=""/>
+	
+	</bean>
+	
+	<bean id="notice02" class="acme.entities.notice.Notice">
+	
+	<property name="picture" value="https://www.fotoAviso2.com"/>
+	<property name="creation" value="2020/06/06 10:00"/>
+	<property name="deadline" value="2021/08/07 14:20"/>  <!-- 	Si queremos comprobar que solo se muestren las activas la creamos un minuto -->
+	<property name="body" value="Aviso sobre reformas laborales"/> <!-- más tarde de la hora actual (mientras esperamos al sample ya habra pasado -->
+	<property name="optional1" value="https://www.fotoInformativaOpcional2.com"/> <!-- ese tiempo) -->
+	<property name="optional2" value=""/>
+	
+	</bean>
+	
+	<!-- Overture -->
+	
+	<bean id="overture01" class="acme.entities.overture.Overture">
+	
+	<property name="title" value="La mejor propuesta"/>
+	<property name="creation" value="2020/06/06 10:00"/>
+	<property name="deadline" value="2021/10/10 12:00"/>
+	<property name="description" value="Una propuesta internacional que cambiara tu vision"/>
+	<property name="minMoney" value="€ 300.8"/>
+	<property name="maxMoney" value="€ 2745.62"/>
+	<property name="email" value="oscdoraba@alum.us.es"/>
+	
+	</bean>
+	
+	<bean id="overture02" class="acme.entities.overture.Overture">
+	
+	<property name="title" value="Propuesta innovadora"/>
+	<property name="creation" value="2020/06/06 10:00"/>
+	<property name="deadline" value="2021/08/07 14:20"/>
+	<property name="description" value="Nueva propuesta sobre la globalizacion"/>
+	<property name="minMoney" value="€ 500.8"/>
+	<property name="maxMoney" value="€ 3829.21"/>
+	<property name="email" value="pabcalper@alum.us.es"/>
+
+	</bean>
+	
+	<!-- Tool Records -->
+	
+	<bean id="toolrecord01" class="acme.entities.toolRecord.ToolRecord">
+	
+	<property name="title" value="La mejor herramienta del mercado"/>
+	<property name="sector" value="Informatico (Software)"/>
+	<property name="inventor" value="Conchi Bermudez"/>
+	<property name="description" value="Máquina con alta capacidad organizativa"/>
+	<property name="website" value="http://www.conchibermudez.com"/>
+	<property name="email" value="conchibermudez@gmail.com"/>
+	<property name="tipo" value="OPEN_SOURCE"/>
+	<property name="stars" value="4"/>
+	
+	</bean>
+	
+	<bean id="toolrecord02" class="acme.entities.toolRecord.ToolRecord">
+	
+	<property name="title" value="Herramienta basica pero muy util"/>
+	<property name="sector" value="Informatico (Software)"/>
+	<property name="inventor" value="Jose Juan Cañizares"/>
+	<property name="description" value="Artilugio capaz de encontrar errores frecuentes en codigo y dar una explicacion entendible"/>
+	<property name="website" value="http://www.josejuancanizares.com"/>
+	<property name="email" value="josejuancanizares@gmail.com"/>
+	<property name="tipo" value="CLOSED_SOURCE"/>
+	<property name="stars" value="2"/>
+	
+	</bean>
+
+</beans>

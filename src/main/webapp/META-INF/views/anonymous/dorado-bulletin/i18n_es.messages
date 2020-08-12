@@ -1,0 +1,21 @@
+# i18n_es.messages
+#
+# Copyright (c) 2019 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+anonymous.dorado-bulletin.list.label.sender = Emisor
+anonymous.dorado-bulletin.list.label.receiver = Receptor
+anonymous.dorado-bulletin.list.label.web = Web
+
+anonymous.dorado-bulletin.form.label.sender = Emisor
+anonymous.dorado-bulletin.form.label.receiver = Receptor
+anonymous.dorado-bulletin.form.label.web = Web
+
+
+anonymous.dorado-bulletin.form.button.create = Crear Dorado Informe
+anonymous.dorado-bulletin.form.button.return = Volver
