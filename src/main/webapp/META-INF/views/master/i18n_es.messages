@@ -47,6 +47,7 @@ master.menu.administrator = Administrador
 master.menu.administrator.user-accounts = Cuentas de usuario
 master.menu.administrator.shutdown = Parar el sistema
 master.menu.administrator.listNotice = Listar Avisos
+master.menu.administrator.createNotice = Crear Aviso
 
 # master.menu.provider ########################################################
 

@@ -19,7 +19,9 @@ administrator.notice.form.label.deadline = Deadline Date
 administrator.notice.form.label.body = Body
 administrator.notice.form.label.optional1 = Optional Link 1
 administrator.notice.form.label.optional2 = Optional Link 2
+authenticated.offer.label.accept = Confirm the creation
+authenticated.requests.error.must-accept = You must confirm the creation
 
-#administrator.notice.form.button.create = Create notice
+administrator.notice.form.button.create = Create notice
 administrator.notice.form.button.return = Return
 
