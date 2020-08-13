@@ -1,5 +1,5 @@
 /*
- * AdministratorUserAccountListService.java
+ * AnonymousUserAccountCreateService.java
  *
  * Copyright (c) 2019 Rafael Corchuelo.
  *
@@ -12,28 +12,28 @@
 
 package acme.features.authenticated.inquiries;
 
-import java.util.Collection;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.inquiries.Inquiries;
-import acme.entities.shout.Shout;
+import acme.entities.technologyRecords.TechnologyRecords;
+import acme.features.anonymous.technologyRecords.AnonymousTechnologyRecordsRepository;
+import acme.framework.components.Errors;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
 import acme.framework.entities.Authenticated;
-import acme.framework.services.AbstractListService;
+import acme.framework.services.AbstractUpdateService;
 
 @Service
-public class AuthenticatedInquiriesListService implements AbstractListService<Authenticated, Inquiries> {
+public class AuthenticatedInquiriesUpdateService implements AbstractUpdateService<Authenticated, Inquiries> {
 
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
 	AuthenticatedInquiriesRepository repository;
 
-
-	
 
 	@Override
 	public boolean authorise(final Request<Inquiries> request) {
@@ -43,26 +43,56 @@ public class AuthenticatedInquiriesListService implements AbstractListService<Au
 	}
 
 	@Override
+	public void bind(final Request<Inquiries> request, final Inquiries entity, final Errors errors) {
+		assert request != null;
+		assert entity != null;
+		assert errors != null;
+
+		request.bind(entity, errors);
+	}
+
+	@Override
 	public void unbind(final Request<Inquiries> request, final Inquiries entity, final Model model) {
 		assert request != null;
 		assert entity != null;
 		assert model != null;
 
-		
+		request.unbind(entity, model, "title", "deadline", "description", "minMoney", "maxMoney", "email");
 
-		request.unbind(entity, model, "title", "dateOfCreation", "deadline");
+		
 	}
-	
 
 	@Override
-	public Collection<Inquiries> findMany(final Request<Inquiries> request) {
+	public Inquiries findOne(final Request<Inquiries> request) {
 		assert request != null;
 
-		Collection<Inquiries> result;
+		Inquiries result;
+		int id;
 
-		result = this.repository.findMany();
-		
+		id = request.getModel().getInteger("id");
+		result = this.repository.findOne(id);
+
 		return result;
+	}
+
+	@Override
+	public void validate(final Request<Inquiries> request, final Inquiries entity, final Errors errors) {
+		assert request != null;
+		assert entity != null;
+		assert errors != null;
+
+	}
+
+		
+
+	@Override
+	public void update(final Request<Inquiries> request, final Inquiries entity) {
+		assert request != null;
+		assert entity != null;
+
+		
+		this.repository.save(entity);
+		
 	}
 
 }

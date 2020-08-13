@@ -1,5 +1,5 @@
 /*
- * AdministratorUserAccountListService.java
+ * AnonymousUserAccountCreateService.java
  *
  * Copyright (c) 2019 Rafael Corchuelo.
  *
@@ -12,28 +12,28 @@
 
 package acme.features.authenticated.challenges;
 
-import java.util.Collection;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.challenges.Challenges;
 import acme.entities.inquiries.Inquiries;
+import acme.features.authenticated.inquiries.AuthenticatedInquiriesRepository;
+import acme.framework.components.Errors;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
 import acme.framework.entities.Authenticated;
-import acme.framework.services.AbstractListService;
+import acme.framework.services.AbstractUpdateService;
 
 @Service
-public class AuthenticatedChallengesListService implements AbstractListService<Authenticated, Challenges> {
+public class AuthenticatedChallengesUpdateService implements AbstractUpdateService<Authenticated, Challenges> {
 
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
 	AuthenticatedChallengesRepository repository;
 
-
-	
 
 	@Override
 	public boolean authorise(final Request<Challenges> request) {
@@ -43,27 +43,56 @@ public class AuthenticatedChallengesListService implements AbstractListService<A
 	}
 
 	@Override
+	public void bind(final Request<Challenges> request, final Challenges entity, final Errors errors) {
+		assert request != null;
+		assert entity != null;
+		assert errors != null;
+
+		request.bind(entity, errors);
+	}
+
+	@Override
 	public void unbind(final Request<Challenges> request, final Challenges entity, final Model model) {
 		assert request != null;
 		assert entity != null;
 		assert model != null;
 
+		request.unbind(entity, model, "title", "deadline", "description", "goal1", "reward1", "goal2", "reward2", "goal3", "reward3");
+
 		
-
-		request.unbind(entity, model, "title", "deadline", "description");
-
 	}
-	
 
 	@Override
-	public Collection<Challenges> findMany(final Request<Challenges> request) {
+	public Challenges findOne(final Request<Challenges> request) {
 		assert request != null;
 
-		Collection<Challenges> result;
+		Challenges result;
+		int id;
 
-		result = this.repository.findMany();
-		
+		id = request.getModel().getInteger("id");
+		result = this.repository.findOne(id);
+
 		return result;
+	}
+
+	@Override
+	public void validate(final Request<Challenges> request, final Challenges entity, final Errors errors) {
+		assert request != null;
+		assert entity != null;
+		assert errors != null;
+
+	}
+
+		
+
+	@Override
+	public void update(final Request<Challenges> request, final Challenges entity) {
+		assert request != null;
+		assert entity != null;
+
+		
+		this.repository.save(entity);
+		
 	}
 
 }

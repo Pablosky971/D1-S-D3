@@ -10,7 +10,7 @@
  * they accept any liabilities with respect to them.
  */
 
-package acme.features.authenticated.inquiries;
+package acme.features.authenticated.technologyRecords;
 
 import javax.annotation.PostConstruct;
 
@@ -18,31 +18,31 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import acme.entities.inquiries.Inquiries;
+import acme.entities.technologyRecords.TechnologyRecords;
 import acme.framework.components.BasicCommand;
 import acme.framework.controllers.AbstractController;
 import acme.framework.entities.Authenticated;
 
 @Controller
-@RequestMapping("/authenticated/inquiries/")
-public class AuthenticatedInquiriesController extends AbstractController<Authenticated, Inquiries> {
+@RequestMapping("/authenticated/technology-records/")
+public class AuthenticatedTechnologyRecordsController extends AbstractController<Authenticated, TechnologyRecords> {
 
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	private AuthenticatedInquiriesListService listService;
+	private AuthenticatedTechnologyRecordsListService listService;
 	
 	@Autowired
-	private AuthenticatedInquiriesShowService showService;
+	private AuthenticatedTechnologyRecordsShowService showService;
 	
 	@Autowired
-	private AuthenticatedInquiriesCreateService createService;
+	private AuthenticatedTechnologyRecordsCreateService createService;
 	
 	@Autowired
-	private AuthenticatedInquiriesUpdateService updateService;
+	private AuthenticatedTechnologyRecordsUpdateService updateService;
 	
 	@Autowired
-	private AuthenticatedInquiriesDeleteService deleteService;
+	private AuthenticatedTechnologyRecordsDeleteService deleteService;
 
 
 	// Constructors -----------------------------------------------------------

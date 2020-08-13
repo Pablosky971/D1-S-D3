@@ -27,6 +27,10 @@
 	<acme:form-textbox code="authenticated.challenges.form.label.reward3" path="reward3"/>
 	
 
-	
+	<acme:form-submit test="${command == 'show'}" code="authenticated.challenges.form.button.update" action="/authenticated/challenges/update"/>
+    <acme:form-submit test="${command == 'show'}" code="authenticated.challenges.form.button.delete" action="/authenticated/challenges/delete"/>
+    <acme:form-submit test="${command == 'create'}" code="authenticated.challenges.form.button.create" action="/authenticated/challenges/create"/>
+    <acme:form-submit test="${command == 'update'}" code="authenticated.challenges.form.button.update" action="/authenticated/challenges/update"/>
+    <acme:form-submit test="${command == 'delete'}" code="authenticated.challenges.form.button.delete" action="/authenticated/challenges/delete"/>
 	<acme:form-return code="authenticated.challenges.form.button.return"/>
 </acme:form>

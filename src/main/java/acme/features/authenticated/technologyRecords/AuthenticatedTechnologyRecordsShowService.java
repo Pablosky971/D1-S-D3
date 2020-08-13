@@ -1,5 +1,5 @@
 /*
- * AdministratorUserAccountListService.java
+ 
  *
  * Copyright (c) 2019 Rafael Corchuelo.
  *
@@ -10,60 +10,67 @@
  * they accept any liabilities with respect to them.
  */
 
-package acme.features.authenticated.challenges;
+package acme.features.authenticated.technologyRecords;
 
-import java.util.Collection;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.entities.challenges.Challenges;
-import acme.entities.inquiries.Inquiries;
+import acme.entities.technologyRecords.TechnologyRecords;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
 import acme.framework.entities.Authenticated;
-import acme.framework.services.AbstractListService;
+import acme.framework.services.AbstractShowService;
 
 @Service
-public class AuthenticatedChallengesListService implements AbstractListService<Authenticated, Challenges> {
+public class AuthenticatedTechnologyRecordsShowService implements AbstractShowService<Authenticated, TechnologyRecords> {
 
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	AuthenticatedChallengesRepository repository;
+	AuthenticatedTechnologyRecordsRepository repository;
 
-
-	
 
 	@Override
-	public boolean authorise(final Request<Challenges> request) {
+	public boolean authorise(final Request<TechnologyRecords> request) {
 		assert request != null;
 
 		return true;
 	}
 
+
+
 	@Override
-	public void unbind(final Request<Challenges> request, final Challenges entity, final Model model) {
+	public void unbind(final Request<TechnologyRecords> request, final TechnologyRecords entity, final Model model) {
 		assert request != null;
 		assert entity != null;
 		assert model != null;
 
+		request.unbind(entity, model, "title", "activitySector", "inventor", "description", "website", "email", "indication", "stars");
+
 		
-
-		request.unbind(entity, model, "title", "deadline", "description");
-
 	}
-	
 
 	@Override
-	public Collection<Challenges> findMany(final Request<Challenges> request) {
+	public TechnologyRecords findOne(final Request<TechnologyRecords> request) {
 		assert request != null;
 
-		Collection<Challenges> result;
+		TechnologyRecords result;
+		int id;
 
-		result = this.repository.findMany();
-		
+		id = request.getModel().getInteger("id");
+		result = this.repository.findOne(id);
+
 		return result;
 	}
 
-}
+
+
+	}
+
+
+
+	
+
+

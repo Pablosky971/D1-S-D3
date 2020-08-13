@@ -11,10 +11,7 @@
 authenticated.inquiries.list.label.title = Título
 authenticated.inquiries.list.label.dateOfCreation = Fecha de creación
 authenticated.inquiries.list.label.deadline = Fecha límite
-authenticated.inquiries.list.label.description = Descripción
-authenticated.inquiries.list.label.minMoney = Dinero mínimo
-authenticated.inquiries.list.label.maxMoney = Dinero máximo
-authenticated.inquiries.list.label.email = Correo electrónico
+
 
 authenticated.inquiries.form.label.title = Título
 authenticated.inquiries.form.label.dateOfCreation = Fecha de creación
@@ -23,5 +20,9 @@ authenticated.inquiries.form.label.description = Descripción
 authenticated.inquiries.form.label.minMoney = Dinero mínimo
 authenticated.inquiries.form.label.maxMoney = Dinero máximo
 authenticated.inquiries.form.label.email = Correo electónico
+
+authenticated.inquiries.form.button.create = Crear
+authenticated.inquiries.form.button.update = Actualizar
+authenticated.inquiries.form.button.delete = Borrar
 authenticated.inquiries.form.button.return = Volver
 
