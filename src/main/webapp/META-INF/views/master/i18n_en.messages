@@ -48,6 +48,8 @@ master.menu.administrator.user-accounts = User accounts
 master.menu.administrator.shutdown = Shut down
 master.menu.administrator.listNotice = List Notices
 master.menu.administrator.createNotice = Create Notice
+master.menu.administrator.listOverture = List Overtures
+master.menu.administrator.createOverture = Create Overture
 
 # master.menu.provider ########################################################
 
