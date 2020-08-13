@@ -50,6 +50,8 @@ master.menu.administrator.listNotice = Listar Avisos
 master.menu.administrator.createNotice = Crear Aviso
 master.menu.administrator.listOverture = Listar Propuestas
 master.menu.administrator.createOverture = Crear Propuesta
+master.menu.administrator.listToolRecord = Listar Registros de Herramientas
+master.menu.administrator.createToolRecord = Crear Registro de Herramientas
 
 # master.menu.provider ########################################################
 

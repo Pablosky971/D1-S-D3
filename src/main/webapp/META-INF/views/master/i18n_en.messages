@@ -50,6 +50,8 @@ master.menu.administrator.listNotice = List Notices
 master.menu.administrator.createNotice = Create Notice
 master.menu.administrator.listOverture = List Overtures
 master.menu.administrator.createOverture = Create Overture
+master.menu.administrator.listToolRecord = List Tool Records
+master.menu.administrator.createToolRecord = Create Tool Record
 
 # master.menu.provider ########################################################
 

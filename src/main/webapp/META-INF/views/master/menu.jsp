@@ -43,6 +43,10 @@
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.createOverture" action="/administrator/overture/create"/>
 			<acme:menu-separator/>
+			<acme:menu-suboption code="master.menu.administrator.listToolRecord" action="/administrator/tool-record/list"/>
+			<acme:menu-separator/>
+			<acme:menu-suboption code="master.menu.administrator.createToolRecord" action="/administrator/tool-record/create"/>
+			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.shutdown" action="/master/shutdown"/>
 			
 		</acme:menu-option>
