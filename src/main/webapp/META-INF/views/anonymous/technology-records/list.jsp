@@ -17,14 +17,10 @@
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
 <acme:list>
-	<acme:list-column code="anonymous.technologyRecords.list.label.title" path="title" width="10%"/>
-	<acme:list-column code="anonymous.technologyRecords.list.label.activitySector" path="activitySector" width="10%"/>
-	<acme:list-column code="anonymous.technologyRecords.list.label.inventor" path="inventor" width="10%"/>
-	<acme:list-column code="anonymous.technologyRecords.list.label.description" path="description" width="10%"/>
-	<acme:list-column code="anonymous.technologyRecords.list.label.website" path="website" width="10%"/>
-	<acme:list-column code="anonymous.technologyRecords.list.label.email" path="email" width="10%"/>
-	<acme:list-column code="anonymous.technologyRecords.list.label.indication" path="indication" width="10%"/>
-	<acme:list-column code="anonymous.technologyRecords.list.label.stars" path="stars" width="10%"/>
+	<acme:list-column code="anonymous.technologyRecords.list.label.title" path="title" width="25%"/>
+	<acme:list-column code="anonymous.technologyRecords.list.label.activitySector" path="activitySector" width="25%"/>
+	<acme:list-column code="anonymous.technologyRecords.list.label.indication" path="indication" width="25%"/>
+	<acme:list-column code="anonymous.technologyRecords.list.label.stars" path="stars" width="25%"/>
 			
 </acme:list>
 

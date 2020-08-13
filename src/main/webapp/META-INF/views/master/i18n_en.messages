@@ -39,6 +39,7 @@ master.menu.anonymous.createCalleBulletin = Create Calle Bulletin
 master.menu.anonymous.listNotice = List Notices
 master.menu.anonymous.listToolRecord = List Tool Records
 master.menu.anonymous.listTechnology-records = List Technology Records 
+master.menu.anonymous.createTechnology-records = Create Technology Records
 
 
 # master.menu.administrator ###################################################
@@ -74,8 +75,13 @@ master.menu.user-account.become-consumer = Become a consumer
 master.menu.user-account.listNotice = List Notices
 master.menu.user-account.listOverture = List Overtures
 master.menu.user-account.listToolRecord = List Tool Records
-master.menu.authenticated.inquiries = List Inquiries
-master.menu.authenticated.challenges = List Challenges
+master.menu.authenticated.listInquiries = List Inquiries
+master.menu.authenticated.createInquiries = Create Inquiry
+master.menu.authenticated.listTechnology-records = List Technology Records
+master.menu.authenticated.createTechnology-records = Create Technology Record
+master.menu.authenticated.listChallenges = List Challenges
+master.menu.authenticated.createChallenges = Create Challenge
+
 
 # master.footer ###############################################################
 

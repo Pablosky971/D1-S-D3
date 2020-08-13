@@ -10,56 +10,55 @@
  * they accept any liabilities with respect to them.
  */
 
-package acme.features.authenticated.challenges;
+package acme.features.authenticated.technologyRecords;
 
 import java.util.Collection;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.entities.challenges.Challenges;
-import acme.entities.inquiries.Inquiries;
+import acme.entities.technologyRecords.TechnologyRecords;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
 import acme.framework.entities.Authenticated;
 import acme.framework.services.AbstractListService;
 
 @Service
-public class AuthenticatedChallengesListService implements AbstractListService<Authenticated, Challenges> {
+public class AuthenticatedTechnologyRecordsListService implements AbstractListService<Authenticated, TechnologyRecords> {
 
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	AuthenticatedChallengesRepository repository;
+	AuthenticatedTechnologyRecordsRepository repository;
 
 
 	
 
 	@Override
-	public boolean authorise(final Request<Challenges> request) {
+	public boolean authorise(final Request<TechnologyRecords> request) {
 		assert request != null;
 
 		return true;
 	}
 
 	@Override
-	public void unbind(final Request<Challenges> request, final Challenges entity, final Model model) {
+	public void unbind(final Request<TechnologyRecords> request, final TechnologyRecords entity, final Model model) {
 		assert request != null;
 		assert entity != null;
 		assert model != null;
 
 		
 
-		request.unbind(entity, model, "title", "deadline", "description");
+		request.unbind(entity, model, "title", "activitySector", "indication", "stars");
 
 	}
 	
 
 	@Override
-	public Collection<Challenges> findMany(final Request<Challenges> request) {
+	public Collection<TechnologyRecords> findMany(final Request<TechnologyRecords> request) {
 		assert request != null;
 
-		Collection<Challenges> result;
+		Collection<TechnologyRecords> result;
 
 		result = this.repository.findMany();
 		

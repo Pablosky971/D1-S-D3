@@ -1,5 +1,5 @@
 /*
- * AdministratorUserAccountListService.java
+ * AnonymousUserAccountCreateService.java
  *
  * Copyright (c) 2019 Rafael Corchuelo.
  *
@@ -12,28 +12,28 @@
 
 package acme.features.anonymous.technologyRecords;
 
-import java.util.Collection;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.entities.inquiries.Inquiries;
+
 import acme.entities.technologyRecords.TechnologyRecords;
+
+import acme.framework.components.Errors;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
 import acme.framework.entities.Anonymous;
-import acme.framework.services.AbstractListService;
+import acme.framework.services.AbstractUpdateService;
 
 @Service
-public class AnonymousTechnologyRecordsListService implements AbstractListService<Anonymous, TechnologyRecords> {
+public class AnonymousTechnologyRecordsUpdateService implements AbstractUpdateService<Anonymous, TechnologyRecords> {
 
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
 	AnonymousTechnologyRecordsRepository repository;
 
-
-	
 
 	@Override
 	public boolean authorise(final Request<TechnologyRecords> request) {
@@ -43,27 +43,56 @@ public class AnonymousTechnologyRecordsListService implements AbstractListServic
 	}
 
 	@Override
+	public void bind(final Request<TechnologyRecords> request, final TechnologyRecords entity, final Errors errors) {
+		assert request != null;
+		assert entity != null;
+		assert errors != null;
+
+		request.bind(entity, errors);
+	}
+
+	@Override
 	public void unbind(final Request<TechnologyRecords> request, final TechnologyRecords entity, final Model model) {
 		assert request != null;
 		assert entity != null;
 		assert model != null;
 
+		request.unbind(entity, model, "title", "activitySector", "inventor", "description", "website", "email", "indication", "stars");
+
 		
-
-		request.unbind(entity, model, "title", "activitySector", "indication", "stars");
-
 	}
-	
 
 	@Override
-	public Collection<TechnologyRecords> findMany(final Request<TechnologyRecords> request) {
+	public TechnologyRecords findOne(final Request<TechnologyRecords> request) {
 		assert request != null;
 
-		Collection<TechnologyRecords> result;
+		TechnologyRecords result;
+		int id;
 
-		result = this.repository.findMany();
-		
+		id = request.getModel().getInteger("id");
+		result = this.repository.findOne(id);
+
 		return result;
+	}
+
+	@Override
+	public void validate(final Request<TechnologyRecords> request, final TechnologyRecords entity, final Errors errors) {
+		assert request != null;
+		assert entity != null;
+		assert errors != null;
+
+	}
+
+		
+
+	@Override
+	public void update(final Request<TechnologyRecords> request, final TechnologyRecords entity) {
+		assert request != null;
+		assert entity != null;
+
+		
+		this.repository.save(entity);
+		
 	}
 
 }

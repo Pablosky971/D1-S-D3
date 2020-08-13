@@ -10,10 +10,6 @@
 
 anonymous.technologyRecords.list.label.title = Título
 anonymous.technologyRecords.list.label.activitySector = Sector de actividad
-anonymous.technologyRecords.list.label.inventor = Inventor
-anonymous.technologyRecords.list.label.description = Descripción
-anonymous.technologyRecords.list.label.website = Sitio web
-anonymous.technologyRecords.list.label.email = Correo electrónico
 anonymous.technologyRecords.list.label.indication = Indicación
 anonymous.technologyRecords.list.label.stars = Estrellas (valoración del 1 al 10)
 
@@ -23,7 +19,10 @@ anonymous.technologyRecords.form.label.inventor = Inventor
 anonymous.technologyRecords.form.label.description = Descripción
 anonymous.technologyRecords.form.label.website = Sitio web
 anonymous.technologyRecords.form.label.email = Correo electrónico
-anonymous.technologyRecords.form.label.indication = Indicación
+anonymous.technologyRecords.form.label.indication = Indicación (OPEN_SOURCE o CLOSE_SOURCE)
 anonymous.technologyRecords.form.label.stars = Estrellas (valoración del 1 al 10)
 
+anonymous.technologyRecords.form.button.create = Crear
+anonymous.technologyRecords.form.button.update = Actualizar
+anonymous.technologyRecords.form.button.delete = Borrar
 anonymous.technologyRecords.form.button.return = Volver

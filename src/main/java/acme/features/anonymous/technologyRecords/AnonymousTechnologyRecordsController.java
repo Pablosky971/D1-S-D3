@@ -34,6 +34,15 @@ public class AnonymousTechnologyRecordsController extends AbstractController<Ano
 	
 	@Autowired
 	private AnonymousTechnologyRecordsShowService showService;
+	
+	@Autowired
+	private AnonymousTechnologyRecordsCreateService createService;
+	
+	@Autowired
+	private AnonymousTechnologyRecordsUpdateService updateService;
+	
+	@Autowired
+	private AnonymousTechnologyRecordsDeleteService deleteService;
 
 
 	// Constructors -----------------------------------------------------------
@@ -42,6 +51,9 @@ public class AnonymousTechnologyRecordsController extends AbstractController<Ano
 	private void initialise() {
 		super.addBasicCommand(BasicCommand.LIST, this.listService);
 		super.addBasicCommand(BasicCommand.SHOW, this.showService);
+		super.addBasicCommand(BasicCommand.CREATE, this.createService);
+		super.addBasicCommand(BasicCommand.UPDATE, this.updateService);
+		super.addBasicCommand(BasicCommand.DELETE, this.deleteService);
 	}
 
 }
