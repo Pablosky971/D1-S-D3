@@ -10,7 +10,7 @@
 
 authenticated.technologyRecords.list.label.title = Title
 authenticated.technologyRecords.list.label.activitySector = Activity sector
-authenticated.technologyRecords.list.label.indication = Indication
+authenticated.technologyRecords.list.label.indication = Indication (OPEN_SOURCE or CLOSE_SOURCE)
 authenticated.technologyRecords.list.label.stars = Stars (rating from 1 to 10)
 
 authenticated.technologyRecords.form.label.title = Title

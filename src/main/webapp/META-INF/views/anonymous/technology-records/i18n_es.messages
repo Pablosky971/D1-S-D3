@@ -10,7 +10,7 @@
 
 anonymous.technologyRecords.list.label.title = Título
 anonymous.technologyRecords.list.label.activitySector = Sector de actividad
-anonymous.technologyRecords.list.label.indication = Indicación
+anonymous.technologyRecords.list.label.indication = Indicación (OPEN_SOURCE o CLOSE_SOURCE)
 anonymous.technologyRecords.list.label.stars = Estrellas (valoración del 1 al 10)
 
 anonymous.technologyRecords.form.label.title = Título
