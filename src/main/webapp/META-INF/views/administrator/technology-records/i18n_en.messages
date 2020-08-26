@@ -22,4 +22,8 @@ authenticated.technologyRecords.form.label.email = Email
 authenticated.technologyRecords.form.label.indication = Indication (OPEN_SOURCE or CLOSE_SOURCE)
 authenticated.technologyRecords.form.label.stars = Stars (rating from 1 to 10)
 
+authenticated.technologyRecords.form.button.create = Create
+authenticated.technologyRecords.form.button.update = Update
+authenticated.technologyRecords.form.button.delete = Delete
+authenticated.technologyRecords.form.button.return = Return
 

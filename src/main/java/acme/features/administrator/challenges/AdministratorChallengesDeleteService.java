@@ -10,7 +10,7 @@
  * they accept any liabilities with respect to them.
  */
 
-package acme.features.authenticated.challenges;
+package acme.features.administrator.challenges;
 
 
 
@@ -18,21 +18,19 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.challenges.Challenges;
-import acme.entities.inquiries.Inquiries;
-import acme.features.authenticated.inquiries.AuthenticatedInquiriesRepository;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
-import acme.framework.entities.Authenticated;
-import acme.framework.services.AbstractUpdateService;
+import acme.framework.entities.Administrator;
+import acme.framework.services.AbstractDeleteService;
 
 @Service
-public class AuthenticatedChallengesUpdateService implements AbstractUpdateService<Authenticated, Challenges> {
+public class AdministratorChallengesDeleteService implements AbstractDeleteService<Administrator, Challenges> {
 
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	AuthenticatedChallengesRepository repository;
+	 AdministratorChallengesRepository repository;
 
 
 	@Override
@@ -86,12 +84,12 @@ public class AuthenticatedChallengesUpdateService implements AbstractUpdateServi
 		
 
 	@Override
-	public void update(final Request<Challenges> request, final Challenges entity) {
+	public void delete(final Request<Challenges> request, final Challenges entity) {
 		assert request != null;
 		assert entity != null;
 
 		
-		this.repository.save(entity);
+		this.repository.delete(entity);
 		
 	}
 

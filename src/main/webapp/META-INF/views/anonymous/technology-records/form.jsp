@@ -25,11 +25,5 @@
 	<acme:form-textbox code="anonymous.technologyRecords.form.label.indication" path="indication"/>
 	<acme:form-integer code="anonymous.technologyRecords.form.label.stars" path="stars"/>
 	
-
-    <acme:form-submit test="${command == 'show'}" code="anonymous.technologyRecords.form.button.update" action="/anonymous/technology-records/update"/>
-    <acme:form-submit test="${command == 'show'}" code="anonymous.technologyRecords.form.button.delete" action="/anonymous/technology-records/delete"/>
-    <acme:form-submit test="${command == 'create'}" code="anonymous.technologyRecords.form.button.create" action="/anonymous/technology-records/create"/>
-    <acme:form-submit test="${command == 'update'}" code="anonymous.technologyRecords.form.button.update" action="/anonymous/technology-records/update"/>
-    <acme:form-submit test="${command == 'delete'}" code="anonymous.technologyRecords.form.button.delete" action="/anonymous/technology-records/delete"/>
 	<acme:form-return code="anonymous.technologyRecords.form.button.return"/>
 </acme:form>

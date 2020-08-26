@@ -10,7 +10,7 @@
  * they accept any liabilities with respect to them.
  */
 
-package acme.features.authenticated.inquiries;
+package acme.features.administrator.inquiries;
 
 import javax.annotation.PostConstruct;
 
@@ -21,20 +21,28 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import acme.entities.inquiries.Inquiries;
 import acme.framework.components.BasicCommand;
 import acme.framework.controllers.AbstractController;
-import acme.framework.entities.Authenticated;
+import acme.framework.entities.Administrator;
 
 @Controller
-@RequestMapping("/authenticated/inquiries/")
-public class AuthenticatedInquiriesController extends AbstractController<Authenticated, Inquiries> {
+@RequestMapping("/administrator/inquiries/")
+public class AdministratorInquiriesController extends AbstractController<Administrator, Inquiries> {
 
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	private AuthenticatedInquiriesListService listService;
+	private AdministratorInquiriesListService listService;
 	
 	@Autowired
-	private AuthenticatedInquiriesShowService showService;
+	private AdministratorInquiriesShowService showService;
 	
+	@Autowired
+	private AdministratorInquiriesCreateService createService;
+	
+	@Autowired
+	private AdministratorInquiriesUpdateService updateService;
+	
+	@Autowired
+	private AdministratorInquiriesDeleteService deleteService;
 
 
 	// Constructors -----------------------------------------------------------
@@ -43,7 +51,9 @@ public class AuthenticatedInquiriesController extends AbstractController<Authent
 	private void initialise() {
 		super.addBasicCommand(BasicCommand.LIST, this.listService);
 		super.addBasicCommand(BasicCommand.SHOW, this.showService);
-		
+		super.addBasicCommand(BasicCommand.CREATE, this.createService);
+		super.addBasicCommand(BasicCommand.UPDATE, this.updateService);
+		super.addBasicCommand(BasicCommand.DELETE, this.deleteService);
 	}
 
 }

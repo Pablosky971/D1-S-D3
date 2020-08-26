@@ -10,7 +10,7 @@
  * they accept any liabilities with respect to them.
  */
 
-package acme.features.anonymous.technologyRecords;
+package acme.features.administrator.technologyRecord;
 
 
 
@@ -21,16 +21,16 @@ import acme.entities.technologyRecords.TechnologyRecords;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
-import acme.framework.entities.Anonymous;
+import acme.framework.entities.Administrator;
 import acme.framework.services.AbstractDeleteService;
 
 @Service
-public class AnonymousTechnologyRecordsDeleteService implements AbstractDeleteService<Anonymous, TechnologyRecords> {
+public class AdministratorTechnologyRecordsDeleteService implements AbstractDeleteService<Administrator, TechnologyRecords> {
 
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	AnonymousTechnologyRecordsRepository repository;
+	AdministratorTechnologyRecordsRepository repository;
 
 
 	@Override

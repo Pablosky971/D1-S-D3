@@ -28,9 +28,7 @@ authenticated.challenges.form.label.reward2 = Second Reward
 authenticated.challenges.form.label.goal3 = Third Goal
 authenticated.challenges.form.label.reward3 = Third Reward
 
-authenticated.challenges.form.button.create = Create
-authenticated.challenges.form.button.update = Update
-authenticated.challenges.form.button.delete = Delete
+
 authenticated.challenges.form.button.return = Return
 
 

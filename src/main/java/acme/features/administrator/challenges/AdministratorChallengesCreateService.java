@@ -10,40 +10,38 @@
  * they accept any liabilities with respect to them.
  */
 
-package acme.features.authenticated.inquiries;
+package acme.features.administrator.challenges;
 
 import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.entities.inquiries.Inquiries;
-import acme.entities.shout.Shout;
-import acme.features.anonymous.shout.AnonymousShoutRepository;
+import acme.entities.challenges.Challenges;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
-import acme.framework.entities.Authenticated;
+import acme.framework.entities.Administrator;
 import acme.framework.services.AbstractCreateService;
 
 @Service
-public class AuthenticatedInquiriesCreateService implements AbstractCreateService<Authenticated, Inquiries> {
+public class AdministratorChallengesCreateService implements AbstractCreateService<Administrator, Challenges> {
 
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	AuthenticatedInquiriesRepository repository;
+	AdministratorChallengesRepository repository;
 
 
 	@Override
-	public boolean authorise(final Request<Inquiries> request) {
+	public boolean authorise(final Request<Challenges> request) {
 		assert request != null;
 
 		return true;
 	}
 
 	@Override
-	public void bind(final Request<Inquiries> request, final Inquiries entity, final Errors errors) {
+	public void bind(final Request<Challenges> request, final Challenges entity, final Errors errors) {
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
@@ -52,28 +50,28 @@ public class AuthenticatedInquiriesCreateService implements AbstractCreateServic
 	}
 
 	@Override
-	public void unbind(final Request<Inquiries> request, final Inquiries entity, final Model model) {
+	public void unbind(final Request<Challenges> request, final Challenges entity, final Model model) {
 		assert request != null;
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "title", "deadline", "description", "minMoney", "maxMoney", "email");
+		request.unbind(entity, model, "title", "deadline", "description", "goal1", "reward1", "goal2", "reward2", "goal3", "reward3");
 
 
 		
 	}
 
 	@Override
-	public Inquiries instantiate(final Request<Inquiries> request) {
+	public Challenges instantiate(final Request<Challenges> request) {
 		assert request != null;
 
-		Inquiries result;
+		Challenges result;
 		Date moment;
 		
 		moment = new Date(System.currentTimeMillis() - 1);
 		
 
-		result = new Inquiries();
+		result = new Challenges();
 		
 		
 
@@ -81,7 +79,7 @@ public class AuthenticatedInquiriesCreateService implements AbstractCreateServic
 	}
 
 	@Override
-	public void validate(final Request<Inquiries> request, final Inquiries entity, final Errors errors) {
+	public void validate(final Request<Challenges> request, final Challenges entity, final Errors errors) {
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
@@ -91,14 +89,11 @@ public class AuthenticatedInquiriesCreateService implements AbstractCreateServic
 		
 
 	@Override
-	public void create(final Request<Inquiries> request, final Inquiries entity) {
+	public void create(final Request<Challenges> request, final Challenges entity) {
 		assert request != null;
 		assert entity != null;
 
-		Date moment;
-		
-		moment = new Date(System.currentTimeMillis() - 1);
-		entity.setDateOfCreation(moment);
+	
 		this.repository.save(entity);
 		
 	}

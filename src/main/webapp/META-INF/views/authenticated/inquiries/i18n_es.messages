@@ -21,8 +21,6 @@ authenticated.inquiries.form.label.minMoney = Dinero mínimo
 authenticated.inquiries.form.label.maxMoney = Dinero máximo
 authenticated.inquiries.form.label.email = Correo electónico
 
-authenticated.inquiries.form.button.create = Crear
-authenticated.inquiries.form.button.update = Actualizar
-authenticated.inquiries.form.button.delete = Borrar
+
 authenticated.inquiries.form.button.return = Volver
 
