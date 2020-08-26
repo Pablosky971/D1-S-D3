@@ -10,39 +10,38 @@
  * they accept any liabilities with respect to them.
  */
 
-package acme.features.authenticated.challenges;
+package acme.features.administrator.technologyRecord;
 
-import java.util.Date;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.entities.challenges.Challenges;
-import acme.entities.inquiries.Inquiries;
+import acme.entities.technologyRecords.TechnologyRecords;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
-import acme.framework.entities.Authenticated;
-import acme.framework.services.AbstractCreateService;
+import acme.framework.entities.Administrator;
+import acme.framework.services.AbstractUpdateService;
 
 @Service
-public class AuthenticatedChallengesCreateService implements AbstractCreateService<Authenticated, Challenges> {
+public class AdministratorTechnologyRecordsUpdateService implements AbstractUpdateService<Administrator, TechnologyRecords> {
 
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	AuthenticatedChallengesRepository repository;
+	AdministratorTechnologyRecordsRepository repository;
 
 
 	@Override
-	public boolean authorise(final Request<Challenges> request) {
+	public boolean authorise(final Request<TechnologyRecords> request) {
 		assert request != null;
 
 		return true;
 	}
 
 	@Override
-	public void bind(final Request<Challenges> request, final Challenges entity, final Errors errors) {
+	public void bind(final Request<TechnologyRecords> request, final TechnologyRecords entity, final Errors errors) {
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
@@ -51,36 +50,31 @@ public class AuthenticatedChallengesCreateService implements AbstractCreateServi
 	}
 
 	@Override
-	public void unbind(final Request<Challenges> request, final Challenges entity, final Model model) {
+	public void unbind(final Request<TechnologyRecords> request, final TechnologyRecords entity, final Model model) {
 		assert request != null;
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "title", "deadline", "description", "goal1", "reward1", "goal2", "reward2", "goal3", "reward3");
-
+		request.unbind(entity, model, "title", "activitySector", "inventor", "description", "website", "email", "indication", "stars");
 
 		
 	}
 
 	@Override
-	public Challenges instantiate(final Request<Challenges> request) {
+	public TechnologyRecords findOne(final Request<TechnologyRecords> request) {
 		assert request != null;
 
-		Challenges result;
-		Date moment;
-		
-		moment = new Date(System.currentTimeMillis() - 1);
-		
+		TechnologyRecords result;
+		int id;
 
-		result = new Challenges();
-		
-		
+		id = request.getModel().getInteger("id");
+		result = this.repository.findOne(id);
 
 		return result;
 	}
 
 	@Override
-	public void validate(final Request<Challenges> request, final Challenges entity, final Errors errors) {
+	public void validate(final Request<TechnologyRecords> request, final TechnologyRecords entity, final Errors errors) {
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
@@ -90,11 +84,11 @@ public class AuthenticatedChallengesCreateService implements AbstractCreateServi
 		
 
 	@Override
-	public void create(final Request<Challenges> request, final Challenges entity) {
+	public void update(final Request<TechnologyRecords> request, final TechnologyRecords entity) {
 		assert request != null;
 		assert entity != null;
 
-	
+		
 		this.repository.save(entity);
 		
 	}

@@ -35,14 +35,7 @@ public class AuthenticatedTechnologyRecordsController extends AbstractController
 	@Autowired
 	private AuthenticatedTechnologyRecordsShowService showService;
 	
-	@Autowired
-	private AuthenticatedTechnologyRecordsCreateService createService;
 	
-	@Autowired
-	private AuthenticatedTechnologyRecordsUpdateService updateService;
-	
-	@Autowired
-	private AuthenticatedTechnologyRecordsDeleteService deleteService;
 
 
 	// Constructors -----------------------------------------------------------
@@ -51,9 +44,7 @@ public class AuthenticatedTechnologyRecordsController extends AbstractController
 	private void initialise() {
 		super.addBasicCommand(BasicCommand.LIST, this.listService);
 		super.addBasicCommand(BasicCommand.SHOW, this.showService);
-		super.addBasicCommand(BasicCommand.CREATE, this.createService);
-		super.addBasicCommand(BasicCommand.UPDATE, this.updateService);
-		super.addBasicCommand(BasicCommand.DELETE, this.deleteService);
+		
 	}
 
 }

@@ -39,7 +39,7 @@ master.menu.anonymous.createCalleBulletin = Create Calle Bulletin
 master.menu.anonymous.listNotice = List Notices
 master.menu.anonymous.listToolRecord = List Tool Records
 master.menu.anonymous.listTechnology-records = List Technology Records 
-master.menu.anonymous.createTechnology-records = Create Technology Records
+
 
 
 # master.menu.administrator ###################################################
@@ -49,10 +49,16 @@ master.menu.administrator.user-accounts = User accounts
 master.menu.administrator.shutdown = Shut down
 master.menu.administrator.listNotice = List Notices
 master.menu.administrator.createNotice = Create Notice
+master.menu.administrator.listInquiries = List Inquiries
+master.menu.administrator.createInquiries = Create Inquiry
 master.menu.administrator.listOverture = List Overtures
 master.menu.administrator.createOverture = Create Overture
+master.menu.administrator.listTechnology-records = List Technology Records
+master.menu.administrator.createTechnology-records = Create Technology Records
 master.menu.administrator.listToolRecord = List Tool Records
 master.menu.administrator.createToolRecord = Create Tool Record
+master.menu.administrator.listChallenges = List Challenges
+master.menu.administrator.createChallenges = Create Challenge
 
 # master.menu.provider ########################################################
 
@@ -73,14 +79,12 @@ master.menu.user-account.become-provider = Become a provider
 master.menu.user-account.consumer = Consumer data
 master.menu.user-account.become-consumer = Become a consumer
 master.menu.user-account.listNotice = List Notices
+master.menu.user-account.listInquiries = List Inquiries
 master.menu.user-account.listOverture = List Overtures
 master.menu.user-account.listToolRecord = List Tool Records
-master.menu.authenticated.listInquiries = List Inquiries
-master.menu.authenticated.createInquiries = Create Inquiry
 master.menu.authenticated.listTechnology-records = List Technology Records
-master.menu.authenticated.createTechnology-records = Create Technology Record
 master.menu.authenticated.listChallenges = List Challenges
-master.menu.authenticated.createChallenges = Create Challenge
+
 
 
 # master.footer ###############################################################

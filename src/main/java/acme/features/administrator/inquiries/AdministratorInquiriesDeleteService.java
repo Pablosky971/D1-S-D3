@@ -10,7 +10,7 @@
  * they accept any liabilities with respect to them.
  */
 
-package acme.features.authenticated.inquiries;
+package acme.features.administrator.inquiries;
 
 
 
@@ -18,21 +18,19 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.inquiries.Inquiries;
-import acme.entities.technologyRecords.TechnologyRecords;
-import acme.features.anonymous.technologyRecords.AnonymousTechnologyRecordsRepository;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
-import acme.framework.entities.Authenticated;
+import acme.framework.entities.Administrator;
 import acme.framework.services.AbstractDeleteService;
 
 @Service
-public class AuthenticatedInquiriesDeleteService implements AbstractDeleteService<Authenticated, Inquiries> {
+public class AdministratorInquiriesDeleteService implements AbstractDeleteService<Administrator, Inquiries> {
 
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	 AuthenticatedInquiriesRepository repository;
+	 AdministratorInquiriesRepository repository;
 
 
 	@Override

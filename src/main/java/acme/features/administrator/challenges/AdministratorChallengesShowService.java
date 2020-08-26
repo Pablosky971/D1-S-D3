@@ -1,5 +1,5 @@
 /*
- * AnonymousUserAccountCreateService.java
+ 
  *
  * Copyright (c) 2019 Rafael Corchuelo.
  *
@@ -10,7 +10,7 @@
  * they accept any liabilities with respect to them.
  */
 
-package acme.features.authenticated.challenges;
+package acme.features.administrator.challenges;
 
 
 
@@ -18,20 +18,18 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.challenges.Challenges;
-import acme.entities.inquiries.Inquiries;
-import acme.framework.components.Errors;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
-import acme.framework.entities.Authenticated;
-import acme.framework.services.AbstractDeleteService;
+import acme.framework.entities.Administrator;
+import acme.framework.services.AbstractShowService;
 
 @Service
-public class AuthenticatedChallengesDeleteService implements AbstractDeleteService<Authenticated, Challenges> {
+public class AdministratorChallengesShowService implements AbstractShowService<Administrator, Challenges> {
 
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	 AuthenticatedChallengesRepository repository;
+	AdministratorChallengesRepository repository;
 
 
 	@Override
@@ -41,14 +39,7 @@ public class AuthenticatedChallengesDeleteService implements AbstractDeleteServi
 		return true;
 	}
 
-	@Override
-	public void bind(final Request<Challenges> request, final Challenges entity, final Errors errors) {
-		assert request != null;
-		assert entity != null;
-		assert errors != null;
 
-		request.bind(entity, errors);
-	}
 
 	@Override
 	public void unbind(final Request<Challenges> request, final Challenges entity, final Model model) {
@@ -74,24 +65,12 @@ public class AuthenticatedChallengesDeleteService implements AbstractDeleteServi
 		return result;
 	}
 
-	@Override
-	public void validate(final Request<Challenges> request, final Challenges entity, final Errors errors) {
-		assert request != null;
-		assert entity != null;
-		assert errors != null;
+
 
 	}
 
-		
 
-	@Override
-	public void delete(final Request<Challenges> request, final Challenges entity) {
-		assert request != null;
-		assert entity != null;
 
-		
-		this.repository.delete(entity);
-		
-	}
+	
 
-}
+

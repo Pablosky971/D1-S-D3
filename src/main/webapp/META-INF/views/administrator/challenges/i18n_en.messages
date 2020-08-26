@@ -1,0 +1,36 @@
+# i18n_en.messages
+#
+# Copyright (c) 2019 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+administrator.challenges.list.label.title = Title
+administrator.challenges.list.label.deadline = Deadline
+administrator.challenges.list.label.description = Description
+administrator.challenges.list.label.goal1 =  First Goal
+administrator.challenges.list.label.reward1 = First Reward
+administrator.challenges.list.label.goal2 = Second Goal
+administrator.challenges.list.label.reward2 = Second Reward
+administrator.challenges.list.label.goal3 = Third Goal
+administrator.challenges.list.label.reward3 = Third Reward
+
+administrator.challenges.form.label.title = Title
+administrator.challenges.form.label.deadline = Deadline
+administrator.challenges.form.label.description = Description
+administrator.challenges.form.label.goal1 =  First Goal
+administrator.challenges.form.label.reward1 = First Reward
+administrator.challenges.form.label.goal2 = Second Goal
+administrator.challenges.form.label.reward2 = Second Reward
+administrator.challenges.form.label.goal3 = Third Goal
+administrator.challenges.form.label.reward3 = Third Reward
+
+administrator.challenges.form.button.create = Create
+administrator.challenges.form.button.update = Update
+administrator.challenges.form.button.delete = Delete
+administrator.challenges.form.button.return = Return
+
+

@@ -28,7 +28,5 @@ authenticated.challenges.form.label.reward2 = Segundo Premio
 authenticated.challenges.form.label.goal3 = Tercer Objetivo
 authenticated.challenges.form.label.reward3 = Tercer Premio
 
-authenticated.challenges.form.button.create = Crear 
-authenticated.challenges.form.button.update = Actualizar
-authenticated.challenges.form.button.delete = Borrar
+
 authenticated.challenges.form.button.return = Volver

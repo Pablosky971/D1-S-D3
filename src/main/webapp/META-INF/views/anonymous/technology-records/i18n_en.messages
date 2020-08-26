@@ -22,8 +22,6 @@ anonymous.technologyRecords.form.label.email = Email
 anonymous.technologyRecords.form.label.indication = Indication (OPEN_SOURCE or CLOSE_SOURCE)
 anonymous.technologyRecords.form.label.stars = Stars (rating from 1 to 10)
 
-anonymous.technologyRecords.form.button.create = Create
-anonymous.technologyRecords.form.button.update = Update
-anonymous.technologyRecords.form.button.delete = Delete
+
 anonymous.technologyRecords.form.button.return = Return
 

@@ -12,6 +12,8 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
 
+import org.hibernate.validator.constraints.Length;
+
 import acme.framework.datatypes.Money;
 import acme.framework.entities.DomainEntity;
 import lombok.Getter;
@@ -31,16 +33,20 @@ public class Inquiries extends DomainEntity{
 	@NotBlank
 	private String title;
 	
+	
 	@Temporal(TemporalType.TIMESTAMP)
+	@NotNull
 	@Past
 	private Date dateOfCreation;
 	
 
 	@Temporal(TemporalType.TIMESTAMP)
+	@NotNull
 	@Future
 	private Date deadline;
 	
 	@NotBlank
+	@Length
 	private String description;
 	
 
