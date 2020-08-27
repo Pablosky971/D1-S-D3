@@ -20,7 +20,6 @@ administrator.technologyRecords.form.label.website = Sitio web
 administrator.technologyRecords.form.label.email = Correo electrónico
 administrator.technologyRecords.form.label.indication = Indicación
 administrator.technologyRecords.form.label.stars = Estrellas (valoración del 1 al 10)
-administrator.technologyRecords.error.indication = La indicación debe ser "OPEN_SOURCE" o "CLOSE_SOURCE"
 
 administrator.technologyRecords.form.button.create = Crear
 administrator.technologyRecords.form.button.update = Actualizar
