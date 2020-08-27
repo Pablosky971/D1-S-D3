@@ -296,7 +296,6 @@ m2=*
 has v</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
   </element>
-  
   <element>
     <id>UMLClass</id>
     <coordinates>
@@ -359,9 +358,6 @@ DoradoBulletin
 </panel_attributes>
     <additional_attributes/>
   </element>
-  
-  
-  
   <element>
     <id>UMLClass</id>
     <coordinates>
@@ -378,12 +374,10 @@ Shout
 + text: String{NotBlank}
 </panel_attributes>
     <additional_attributes/>
-  </element>  
-      
-      
+  </element>
   <element>
     <id>UMLClass</id>
-    <coordinates>     
+    <coordinates>
       <x>721</x>
       <y>532</y>
       <w>266</w>
@@ -393,8 +387,8 @@ Shout
 Inquiries
 --
 + title: String{NotBlank}
-+ dateOfCreation: Date{Temporal(TIMESTAMP),Past}
-+ deadline: Date{Temporal(TIMESTAMP),Future}
++ dateOfCreation: Date{Temporal(TIMESTAMP),NotNull,Past}
++ deadline: Date{Temporal(TIMESTAMP),NotNull,Future}
 + description: String{NotBlank}
 + minMoney: Money{NotNull, Valid}
 + maxMoney: Money{NotNull, Valid}
@@ -402,8 +396,6 @@ Inquiries
 </panel_attributes>
     <additional_attributes/>
   </element>
-
-
   <element>
     <id>UMLClass</id>
     <coordinates>
@@ -425,15 +417,11 @@ Overture
 </panel_attributes>
     <additional_attributes/>
   </element>
-    
-      
-      
-      
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>280</x>
-      <y>532</y>
+      <x>294</x>
+      <y>651</y>
       <w>266</w>
       <h>126</h>
     </coordinates>
@@ -451,8 +439,6 @@ TechnologyRecords
 </panel_attributes>
     <additional_attributes/>
   </element>
-      
-      
   <element>
     <id>UMLClass</id>
     <coordinates>
@@ -467,10 +453,8 @@ HttpMethod
 + GET
 + POST
 bg=yellow</panel_attributes>
-  <additional_attributes/>
+    <additional_attributes/>
   </element>
-  
-  
   <element>
     <id>UMLClass</id>
     <coordinates>
@@ -487,11 +471,7 @@ Indication
 </panel_attributes>
     <additional_attributes/>
   </element>
-  
-  
-  
-
-<element>
+  <element>
     <id>UMLClass</id>
     <coordinates>
       <x>301</x>
@@ -512,14 +492,12 @@ ToolRecord
 + stars: Integer{NotNull, Min(value = 0), Max(value = 5)}
 </panel_attributes>
     <additional_attributes/>
-  </element>                        
- 
-                        
-<element>
+  </element>
+  <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>0</x>
-      <y>532</y>
+      <x>7</x>
+      <y>651</y>
       <w>266</w>
       <h>126</h>
     </coordinates>
@@ -527,7 +505,7 @@ ToolRecord
 Challenges
 --
 + title: String{NotBlank}
-+ deadline: Date{Temporal(TIMESTAMP),Future}
++ deadline: Date{Temporal(TIMESTAMP),NotNull,Future}
 + description: String{NotBlank}
 + goal1: String{NotBlank}
 + reward1: String{NotBlank}
@@ -538,6 +516,4 @@ Challenges
 </panel_attributes>
     <additional_attributes/>
   </element>
-
-
 </diagram>
