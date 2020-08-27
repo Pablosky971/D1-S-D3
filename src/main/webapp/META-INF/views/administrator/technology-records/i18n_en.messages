@@ -10,7 +10,6 @@
 
 administrator.technologyRecords.list.label.title = Title
 administrator.technologyRecords.list.label.activitySector = Activity sector
-administrator.technologyRecords.list.label.indication = Indication (OPEN_SOURCE or CLOSE_SOURCE)
 administrator.technologyRecords.list.label.stars = Stars (rating from 1 to 10)
 
 administrator.technologyRecords.form.label.title = Title
@@ -19,8 +18,11 @@ administrator.technologyRecords.form.label.inventor = Inventor
 administrator.technologyRecords.form.label.description = Description
 administrator.technologyRecords.form.label.website = Website
 administrator.technologyRecords.form.label.email = Email
-administrator.technologyRecords.form.label.indication = Indication (OPEN_SOURCE or CLOSE_SOURCE)
+administrator.technologyRecords.form.label.indication = Indication
 administrator.technologyRecords.form.label.stars = Stars (rating from 1 to 10)
+
+
+
 
 administrator.technologyRecords.form.button.create = Create
 administrator.technologyRecords.form.button.update = Update

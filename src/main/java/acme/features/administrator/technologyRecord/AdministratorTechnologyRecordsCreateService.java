@@ -17,6 +17,7 @@ import java.util.Date;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.entities.technologyRecords.Indication;
 import acme.entities.technologyRecords.TechnologyRecords;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
@@ -81,6 +82,7 @@ public class AdministratorTechnologyRecordsCreateService implements AbstractCrea
 		assert entity != null;
 		assert errors != null;
 
+		
 	}
 
 		

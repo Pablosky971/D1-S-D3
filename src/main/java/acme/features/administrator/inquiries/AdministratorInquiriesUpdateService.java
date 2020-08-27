@@ -14,6 +14,8 @@ package acme.features.administrator.inquiries;
 
 
 
+import java.util.Date;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -46,7 +48,7 @@ public class AdministratorInquiriesUpdateService implements AbstractUpdateServic
 		assert entity != null;
 		assert errors != null;
 
-		request.bind(entity, errors, "createOfCreation");
+		request.bind(entity, errors);
 	}
 
 	@Override
@@ -109,6 +111,11 @@ public class AdministratorInquiriesUpdateService implements AbstractUpdateServic
 	public void update(final Request<Inquiries> request, final Inquiries entity) {
 		assert request != null;
 		assert entity != null;
+		
+		Date moment;
+		
+		moment = new Date(System.currentTimeMillis() - 1);
+		entity.setDateOfCreation(moment); 
 
 		
 		this.repository.save(entity);

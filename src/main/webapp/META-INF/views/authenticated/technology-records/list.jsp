@@ -19,7 +19,6 @@
 <acme:list>
 	<acme:list-column code="authenticated.technologyRecords.list.label.title" path="title" width="25%"/>
 	<acme:list-column code="authenticated.technologyRecords.list.label.activitySector" path="activitySector" width="25%"/>
-	<acme:list-column code="authenticated.technologyRecords.list.label.indication" path="indication" width="25%"/>
 	<acme:list-column code="authenticated.technologyRecords.list.label.stars" path="stars" width="25%"/>
 			
 </acme:list>

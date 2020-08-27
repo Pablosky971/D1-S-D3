@@ -10,7 +10,6 @@
 
 authenticated.technologyRecords.list.label.title = Título
 authenticated.technologyRecords.list.label.activitySector = Sector de actividad
-authenticated.technologyRecords.list.label.indication = Indicación (OPEN_SOURCE o CLOSE_SOURCE)
 authenticated.technologyRecords.list.label.stars = Estrellas (valoración del 1 al 10)
 
 authenticated.technologyRecords.form.label.title = Título
@@ -19,6 +18,8 @@ authenticated.technologyRecords.form.label.inventor = Inventor
 authenticated.technologyRecords.form.label.description = Descripción
 authenticated.technologyRecords.form.label.website = Sitio web
 authenticated.technologyRecords.form.label.email = Correo electrónico
-authenticated.technologyRecords.form.label.indication = Indicación (OPEN_SOURCE o CLOSE_SOURCE)
+authenticated.technologyRecords.form.label.indication = Indicación
 authenticated.technologyRecords.form.label.stars = Estrellas (valoración del 1 al 10)
+
+authenticated.technologyRecords.form.button.return = Volver
 
